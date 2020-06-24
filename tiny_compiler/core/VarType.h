@@ -1,0 +1,8 @@
+#ifndef TINY_COMPILE_VAL_TYPE_H
+#define TINY_COMPILE_VAL_TYPE_H
+
+enum class VarType {
+    VT_VOID, VT_INT, VT_BOOL, VT_STRING
+};
+
+#endif //TINY_COMPILE_VAL_TYPE_H
