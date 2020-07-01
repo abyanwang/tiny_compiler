@@ -1,0 +1,19 @@
+0)   START
+1)   if A < C goto line 3
+2)   goto line 18
+3)   if B > D goto line 5
+4)   goto line 18
+5)   if A = 1 goto line 7
+6)   goto line 11
+7)   t0 := B * C
+8)   t1 := t0 + 37
+9)   A := t1
+10)  goto line 17
+11)  t2 := A * 2
+12)  A := t2
+13)  t3 := A + C
+14)  t4 := B + D
+15)  if t3 <= t4 goto line 11
+16)  goto line 17
+17)  goto line 1
+18)  END

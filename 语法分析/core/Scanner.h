@@ -17,7 +17,7 @@ class Scanner {
         	analyse();
     	}
         
-	    inline vector<Token> getTokens() {
+	    vector<Token> getTokens() {
         	return list;
     	}
     	
@@ -26,14 +26,14 @@ class Scanner {
 	private:
     // temporary variables
     	string word;
-    	Token::Type type = Token::Type::NONE;
-    	int line_number = 1;
-    	int char_number = -1;
+    	TokenType type = TokenType::NONE;
+    	int lineNumber = 1;
+    	int charNumber = -1;
     	bool isSign = false;
     
     
-        void new_line();
-    	void close_word();
+        void newLine();
+    	void figureWord();
     	void analyse();
         
 };

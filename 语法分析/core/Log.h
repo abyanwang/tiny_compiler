@@ -8,29 +8,29 @@ using namespace std;
 class Log {
 	private: 
 	    ostream& out;
-	    int error_count = 0;
+	    int errorCount = 0;
 	public:
-	    Log(ostream& output_stream) : out(output_stream) {}
+	    Log(ostream& outputStream): out(outputStream){}
 	    int getErrorCount() {
-	        return error_count;
+	        return errorCount;
 	    }
 	    bool hasError() {
-	        return error_count != 0;
+	        return errorCount != 0;
 	    }
 	
-	    void error(const string &info, int line, int offset) {
+	    void error(string info, int line, int offset) {
 	        out << "ERROR IN LINE " << line << ":" << offset << " " << info << endl;
-	        error_count ++;
+	        errorCount ++;
 	    }
 	
-	    void parse_error(const string &info, int line, int offset) {
+	    void parseError(string info, int line, int offset) {
 	        out << "SYNTAX ERROR IN LINE " << line << ":" << offset << " " << info << endl;
-	        error_count ++;
+	        errorCount ++;
 	    }
 	
-	    void type_error(const std::string &info, int line, int offset) {
+	    void typeError(string info, int line, int offset) {
 	        out << "TYPE ERROR IN LINE " << line << ":" << offset << " " << info << endl;
-	        error_count ++;
+	        errorCount ++;
 	    }
 };
 

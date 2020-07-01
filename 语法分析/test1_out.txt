@@ -1,0 +1,33 @@
+stmt_sequence
+  read
+    factor: x
+  if
+    and
+      >
+        factor: x
+        factor: 0
+      <
+        factor: x
+        factor: 100
+    stmt_sequence
+      assign
+        factor: fact
+        factor: 1
+      stmt_sequence
+        while
+          >
+            factor: x
+            factor: 0
+          stmt_sequence
+            assign
+              factor: fact
+              mul
+                factor: fact
+                factor: x
+            assign
+              factor: x
+              sub
+                factor: x
+                factor: 1
+        write
+          factor: fact

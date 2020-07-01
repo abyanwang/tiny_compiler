@@ -76,7 +76,7 @@ void TreeNode::printHelper(ostream& out,const TreeNode* node, int indent) {
             out << "not" << endl;
             break;
         case NodeType::FACTOR:
-            out << "factor: " + node->token->token << endl;
+            out << "factor:var=" + node->token->token << endl;
             break;
         default:
             out << "unknown NodeType: " + node->token->token << endl;

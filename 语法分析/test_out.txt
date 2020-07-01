@@ -1,0 +1,32 @@
+while
+  and
+    <
+      factor: A
+      factor: C
+    >
+      factor: B
+      factor: D
+  if
+    =
+      factor: A
+      factor: 1
+    assign
+      factor: A
+      plus
+        mul
+          factor: B
+          factor: C
+        factor: 37
+    repeat
+      assign
+        factor: A
+        mul
+          factor: A
+          factor: 2
+      <=
+        plus
+          factor: A
+          factor: C
+        plus
+          factor: B
+          factor: D
